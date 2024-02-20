@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Anywhere from "./assets/Anywhere.png";
 import VogueVault from "./assets/VogueVault.png";
 import bg from "./assets/bg.mp4";
 export default function App() {
+  const [repos, setRepos] = useState([]);
+  const apiUrl = "https://api.github.com/users/itss0urav/repos";
+
+  useEffect(() => {
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => setRepos(data))
+      .catch((error) => console.log(error));
+  }, []);
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center  animate-fade-in-down">
       <video
@@ -169,6 +178,38 @@ export default function App() {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <div className="text-4xl text-center mb-4 font-bold  neon-blue rounded-md p-1 bg-gradient-to-r from-fuchsia-200 to-sky-500 bg-clip-text text-transparent">
+              GitHub Repos
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {repos.map((repo) => (
+                <div
+                  key={repo.id}
+                  className="rounded overflow-hidden shadow-lg p-4 backdrop-blur-xl neon-sky"
+                >
+                  <a
+                    href={repo.html_url}
+                    className="block mt-1 text-lg leading-tight font-medium neon-cyan rounded-md p-1 bg-gradient-to-r from-fuchsia-200 to-fuchsia-500 bg-clip-text text-transparent "
+                  >
+                    {repo.name}
+                  </a>
+                  <p className="mt-2 text-gray-500">
+                    {repo.description || "No description in GitHub"}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className=" text-center mt-3">
+              <a
+                href="mailto:souravhacks987@gmail.com"
+                className="text-white text-xl neon-sky p-2 text-center"
+              >
+                Message Me
+              </a>
             </div>
           </div>
         </div>
