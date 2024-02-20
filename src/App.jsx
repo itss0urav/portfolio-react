@@ -206,7 +206,7 @@ export default function App() {
             <div className=" text-center mt-3">
               <a
                 href="mailto:souravhacks987@gmail.com"
-                className="text-white text-xl neon-sky p-2 text-center"
+                className="text-white text-xl neon-sky p-2 text-center rounded-md"
               >
                 Message Me
               </a>
