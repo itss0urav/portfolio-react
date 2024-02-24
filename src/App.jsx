@@ -47,14 +47,15 @@ export default function App() {
           </div>
 
           {/* test */}
-
-          <div className="mt-[50%] md:mt-[40%] neon-fuchsia backdrop-blur-xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent  rounded-lg shadow-md p-8 mb-8">
-            <h1 className="text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-4">
+          <div className="bg-violet-300 bg-opacity-40 mt-[50%] md:mt-[40%] neon-fuchsia backdrop-blur-xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent  rounded-lg shadow-md p-8 mb-8">
+            <h1 className="  text-center font-bold text-2xl md:text-5xl">
+              Hi, I'm Sourav
+            </h1>
+            <h1 className=" text-xl md:text-4xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-4">
               <TypeAnimation
                 sequence={[
                   // Same substring at the start will only be typed once, initially
-                  "Hi, I'm Sourav",
-                  2000,
+
                   "I'm a full stack developer",
                   2000,
                   "Currently focused in MERN Stack development",
@@ -206,7 +207,7 @@ export default function App() {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medium_%28website%29_logo.svg/2560px-Medium_%28website%29_logo.svg.png"
                   alt="Medium"
-                  className=" bg-white p-1 transition-transform duration-500 hover:scale-105  hover:neon-red rounded-md w-40"
+                  className=" bg-white p-1 transition-transform duration-500 hover:scale-105  hover:neon-gray rounded-md w-40"
                 />
               </a>
             </div>
@@ -303,7 +304,7 @@ export default function App() {
           </div>
 
           <div className="mt-8">
-             <div className="flex gap-8 justify-center">
+            <div className="flex gap-8 justify-center">
               <div className="text-center mt-2">
                 <a
                   href="mailto:sourav2021official@gmail.com"
@@ -320,31 +321,6 @@ export default function App() {
                   Download Resume
                 </button>
               </div>
-            </div>
-            <div className="text-2xl md:text-5xl  text-center my-4 font-bold  rounded-md p-1 bg-gradient-to-r from-fuchsia-200 to-sky-500 bg-clip-text text-transparent text-opacity-100">
-              GitHub Repos
-            </div>
-            
-           
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
-              {repos.map((repo) => (
-                <div
-                  key={repo.id}
-                  className="transition-transform duration-500 hover:scale-105 rounded overflow-hidden shadow-lg p-4 bg-violet-300 bg-opacity-30 neon-fuchsia"
-                >
-                  <div className="flex justify-center hover:bg-sky-400 rounded-md neon-fuchsia">
-                    <a
-                      href={repo.html_url}
-                      className=" block mt-1 text-2xl leading-tight font-bold  rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent text-opacity-100"
-                    >
-                      {repo.name}
-                    </a>
-                  </div>
-                  <p className="mt-2 bg-gradient-to-r from-fuchsia-200 to-fuchsia-400 text-xl bg-clip-text text-transparent text-opacity-100">
-                    {repo.description || "No description in GitHub"}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
