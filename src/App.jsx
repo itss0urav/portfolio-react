@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import Anywhere from "./assets/Anywhere.png";
 import VogueVault from "./assets/VogueVault.png";
 import TaskMate from "./assets/TaskMate.png";
-
+import resume from "/Sourav S  Resume.pdf";
 import bg from "./assets/bg.mp4";
 import { TypeAnimation } from "react-type-animation";
+
+import top from "./assets/imgs/top.png";
+
 export default function App() {
   const [repos, setRepos] = useState([]);
   const apiUrl = "https://api.github.com/users/itss0urav/repos";
@@ -15,6 +18,14 @@ export default function App() {
       .then((data) => setRepos(data))
       .catch((error) => console.log(error));
   }, []);
+
+  const downloadResume = () => {
+    const url = resume;
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Sourav S  Resume.pdf";
+    link.click();
+  };
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center  animate-fade-in-down">
       <video
@@ -26,7 +37,18 @@ export default function App() {
       />
       <div className=" min-h-screen py-6 flex flex-col justify-center sm:py-12 z-10">
         <div className="mx-auto max-w-[80%]">
-          <div className="neon-fuchsia backdrop-blur-xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent  rounded-lg shadow-md p-8 mb-8">
+          {/* test */}
+          <div className=" flex justify-center ">
+            <img
+              src={top}
+              alt=""
+              className="absolute z-[-1]  w-2/3 md:w-[50rem] object-cover transform-gpu  "
+            />
+          </div>
+
+          {/* test */}
+
+          <div className="mt-[50%] md:mt-[40%] neon-fuchsia backdrop-blur-xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent  rounded-lg shadow-md p-8 mb-8">
             <h1 className="text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-4">
               <TypeAnimation
                 sequence={[
@@ -155,7 +177,7 @@ export default function App() {
             <div className="text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-6">
               Socials
             </div>
-            <div className="flex justify-center gap-24">
+            <div className=" m-4 flex justify-center gap-24">
               <a href="https://www.linkedin.com/in/itssourav/" target="_blank">
                 <img
                   src="https://img.shields.io/badge/-LinkedIn-2867B2?style=flat-square&logo=linkedin&logoColor=white"
@@ -178,6 +200,13 @@ export default function App() {
                   src="https://img.shields.io/badge/-Instagram-E4405F?style=flat-square&logo=Instagram&logoColor=white"
                   alt="Instagram"
                   className="transition-transform duration-500 hover:scale-105  hover:neon-red rounded-md w-40"
+                />
+              </a>
+              <a target="_blank" href="https://medium.com/@itss0urav">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medium_%28website%29_logo.svg/2560px-Medium_%28website%29_logo.svg.png"
+                  alt="Medium"
+                  className=" bg-white p-1 transition-transform duration-500 hover:scale-105  hover:neon-red rounded-md w-40"
                 />
               </a>
             </div>
@@ -260,7 +289,7 @@ export default function App() {
                   TaskMate is a web application designed to help people manage
                   their tasks.
                 </p>
-                <div className="mt-[14%] flex justify-center hover:bg-green-500 rounded-md neon-cyan p-2 ">
+                <div className="mt-[22%] flex justify-center hover:bg-green-500 rounded-md neon-cyan p-2 ">
                   <a
                     target="_blank"
                     href="https://github.com/itss0urav/task-mates"
@@ -274,9 +303,29 @@ export default function App() {
           </div>
 
           <div className="mt-8">
-            <div className="text-2xl md:text-5xl  text-center mb-4 font-bold  rounded-md p-1 bg-gradient-to-r from-fuchsia-200 to-sky-500 bg-clip-text text-transparent text-opacity-100">
+             <div className="flex gap-8 justify-center">
+              <div className="text-center mt-2">
+                <a
+                  href="mailto:sourav2021official@gmail.com"
+                  className="hover:bg-cyan-300 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
+                >
+                  Mail Me
+                </a>
+              </div>
+              <div className="text-center ">
+                <button
+                  onClick={downloadResume}
+                  className="hover:bg-cyan-300 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
+                >
+                  Download Resume
+                </button>
+              </div>
+            </div>
+            <div className="text-2xl md:text-5xl  text-center my-4 font-bold  rounded-md p-1 bg-gradient-to-r from-fuchsia-200 to-sky-500 bg-clip-text text-transparent text-opacity-100">
               GitHub Repos
             </div>
+            
+           
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
               {repos.map((repo) => (
                 <div
@@ -296,14 +345,6 @@ export default function App() {
                   </p>
                 </div>
               ))}
-            </div>
-            <div className="text-center mt-10  ">
-              <a
-                href="mailto:souravhacks987@gmail.com"
-                className="hover:bg-cyan-300 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
-              >
-                Mail Me
-              </a>
             </div>
           </div>
         </div>
