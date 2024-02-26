@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Anywhere from "./assets/Anywhere.png";
 import VogueVault from "./assets/VogueVault.png";
 import TaskMate from "./assets/TaskMate.png";
@@ -9,16 +9,6 @@ import { TypeAnimation } from "react-type-animation";
 import top from "./assets/imgs/top.png";
 
 export default function App() {
-  const [repos, setRepos] = useState([]);
-  const apiUrl = "https://api.github.com/users/itss0urav/repos";
-
-  useEffect(() => {
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => setRepos(data))
-      .catch((error) => console.log(error));
-  }, []);
-
   const downloadResume = () => {
     const url = resume;
     const link = document.createElement("a");
@@ -47,8 +37,8 @@ export default function App() {
           </div>
 
           {/* test */}
-          <div className="bg-violet-300 bg-opacity-40 mt-[50%] md:mt-[40%] neon-fuchsia backdrop-blur-xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent  rounded-lg shadow-md p-8 mb-8">
-            <h1 className="  text-center font-bold text-2xl md:text-5xl">
+          <div className="bg-black bg-opacity-50 mt-[50%] md:mt-[40%] neon-fuchsia backdrop-blur-xl   rounded-lg shadow-md p-8 mb-8">
+            <h1 className="  text-center font-bold text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
               Hi, I'm Sourav
             </h1>
             <h1 className=" text-xl md:text-4xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-4">
@@ -70,20 +60,15 @@ export default function App() {
             <p className=" bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent text-center mb-8 text-2xl">
               <TypeAnimation
                 sequence={[
-                  "Hi, I'm Sourav. I am a web developer based in Kerala, India, with a keen interest in creating dynamic and interactive web applications. I have a passion for exploring new technologies and am committed to continually learning and enhancing my skills.",
+                  "I am a web developer based in Kerala, India, with a keen interest in creating dynamic and interactive web applications. I have a passion for exploring new technologies and am committed to continually learning and enhancing my skills.",
                   2000,
                 ]}
                 speed={40}
                 repeat={Infinity}
               />
-
-              {/* I am a web developer based in Kerala, India, with a keen interest
-              in creating dynamic and interactive web applications. I have a
-              passion for exploring new technologies and am committed to
-              continually learning and enhancing my skills. */}
             </p>
             <div className="space-y-5">
-              <h3 className="text-xl text-center font-semibold">
+              <h3 className="text-xl text-center font-semibold bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
                 Languages and Tools
               </h3>
               <div className="flex justify-center">
@@ -178,7 +163,7 @@ export default function App() {
             <div className="text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-6">
               Socials
             </div>
-            <div className=" m-4 flex justify-center gap-24">
+            <div className=" m-4 flex justify-center gap-10 md:gap-24">
               <a href="https://www.linkedin.com/in/itssourav/" target="_blank">
                 <img
                   src="https://img.shields.io/badge/-LinkedIn-2867B2?style=flat-square&logo=linkedin&logoColor=white"
@@ -212,13 +197,13 @@ export default function App() {
               </a>
             </div>
           </div>
-          <div className="text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-6">
+          <div className=" text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-6">
             Projects
           </div>
           {/* Projects Section */}
           <div className="flex justify-center gap-8">
             {/* Anywhere Project */}
-            <div className="transition-transform duration-500 hover:scale-105 max-w-sm backdrop-blur-xl neon-fuchsia rounded-lg shadow p-5">
+            <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105 max-w-sm backdrop-blur-xl neon-fuchsia rounded-lg shadow p-5">
               <img
                 className="rounded-t-lg"
                 src={Anywhere}
@@ -248,19 +233,18 @@ export default function App() {
             </div>
 
             {/* Vogue Vault Project */}
-            <div className="transition-transform duration-500 hover:scale-105  max-w-sm backdrop-blur-xl neon-cyan rounded-lg shadow p-5">
+            <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105 max-w-sm backdrop-blur-xl neon-fuchsia rounded-lg shadow p-5">
               <img
                 className="rounded-t-lg"
                 src={VogueVault}
                 alt="Vogue Vault Project"
               />
               <div className="p-4">
-                <a href="https://github.com/itss0urav/vogue-vault">
-                  <h5 className="mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-sky-500 bg-clip-text text-transparent">
-                    Vogue Vault
-                  </h5>
-                </a>
-                <p className="mb-4 text text-lg font-bold bg-gradient-to-r from-fuchsia-200 to-sky-500 bg-clip-text text-transparent">
+                <h5 className=" w-30 mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-sky-500 bg-clip-text text-transparent">
+                  Vogue Vault
+                </h5>
+
+                <p className="mb-4 text-lg font-bold bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
                   A Backend less Men's shopping site. State management handled
                   using ContextAPI.
                 </p>
@@ -276,7 +260,7 @@ export default function App() {
               </div>
             </div>
             {/* TaskMate Project */}
-            <div className="transition-transform duration-500 hover:scale-105  max-w-sm backdrop-blur-xl neon-green rounded-lg shadow p-5">
+            <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105  max-w-sm backdrop-blur-xl neon-green rounded-lg shadow p-5">
               <img
                 className="rounded-t-lg"
                 src={TaskMate}
@@ -308,7 +292,7 @@ export default function App() {
               <div className="text-center mt-2">
                 <a
                   href="mailto:sourav2021official@gmail.com"
-                  className="hover:bg-cyan-300 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
+                  className="bg-black bg-opacity-50 hover:bg-cyan-300 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
                 >
                   Mail Me
                 </a>
@@ -316,13 +300,20 @@ export default function App() {
               <div className="text-center ">
                 <button
                   onClick={downloadResume}
-                  className="hover:bg-cyan-300 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
+                  className="bg-black bg-opacity-50 hover:bg-cyan-300 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
                 >
                   Download Resume
                 </button>
               </div>
             </div>
           </div>
+          <footer className="mt-4 md:mt-8 bg-black neon-cyan rounded-md backdrop-blur-md bg-opacity-15 shadow">
+            <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+              <p className="text-center text-white">
+                © 2024 Sourav S. All rights reserved.
+              </p>
+            </div>
+          </footer>
         </div>
       </div>
     </div>
