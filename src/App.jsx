@@ -58,7 +58,7 @@ export default function App() {
                 repeat={Infinity}
               />
             </h1>
-            <p className=" bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent text-center mb-8 text-2xl">
+            <p className=" bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent text-center mb-8 text-sm lg:text-2xl">
               <TypeAnimation
                 sequence={[
                   "I am a web developer based in Kerala, India, with a keen interest in creating dynamic and interactive web applications. I have a passion for exploring new technologies and am committed to continually learning and enhancing my skills.",
@@ -78,7 +78,7 @@ export default function App() {
                     <img
                       src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
                       alt="HTML5"
-                      className="transition-transform duration-500 hover:scale-125  hover:neon-cyan hover:bg-cyan-500 w-16"
+                      className="transition-transform duration-500 hover:scale-125  hover:neon-cyan hover:bg-cyan-500 w-8 lg:w-16"
                     />
                   </a>
                   <a target="blank" href="https://www.w3schools.com/css/">
@@ -164,7 +164,7 @@ export default function App() {
             <div className="text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-6">
               Socials
             </div>
-            <div className=" m-4 flex justify-center gap-10 md:gap-24">
+            <div className=" m-4 flex flex-wrap justify-center gap-4 md:gap-24">
               <a href="https://www.linkedin.com/in/itssourav/" target="_blank">
                 <img
                   src="https://img.shields.io/badge/-LinkedIn-2867B2?style=flat-square&logo=linkedin&logoColor=white"
