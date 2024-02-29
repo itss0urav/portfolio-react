@@ -2,6 +2,7 @@ import React from "react";
 import Anywhere from "./assets/Anywhere.png";
 import VogueVault from "./assets/VogueVault.png";
 import TaskMate from "./assets/TaskMate.png";
+import Note4You from "./assets/Note4You.png";
 import resume from "/Sourav S  Resume.pdf";
 import bg from "./assets/bg.mp4";
 import { TypeAnimation } from "react-type-animation";
@@ -201,7 +202,7 @@ export default function App() {
             Projects
           </div>
           {/* Projects Section */}
-          <div className="flex justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {/* Anywhere Project */}
             <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105 max-w-sm backdrop-blur-xl neon-fuchsia rounded-lg shadow p-5">
               <img
@@ -220,11 +221,11 @@ export default function App() {
                   among its users.
                 </p>
 
-                <div className=" flex justify-center hover:bg-fuchsia-500 rounded-md neon-fuchsia p-2 ">
+                <div className="md:mt-[30%] flex justify-center hover:bg-fuchsia-500 rounded-md neon-fuchsia p-2 ">
                   <a
                     target="_blank"
                     href="https://github.com/itss0urav/Anywhere2.0"
-                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-200 to-sky-300 bg-clip-text text-transparent"
+                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-300 bg-clip-text text-transparent"
                   >
                     View Source
                   </a>
@@ -233,14 +234,14 @@ export default function App() {
             </div>
 
             {/* Vogue Vault Project */}
-            <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105 max-w-sm backdrop-blur-xl neon-fuchsia rounded-lg shadow p-5">
+            <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105 max-w-sm backdrop-blur-xl neon-gray rounded-lg shadow p-5">
               <img
                 className="rounded-t-lg"
                 src={VogueVault}
                 alt="Vogue Vault Project"
               />
               <div className="p-4">
-                <h5 className=" w-30 mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-sky-500 bg-clip-text text-transparent">
+                <h5 className=" w-30 mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-gray-500 bg-clip-text text-transparent">
                   Vogue Vault
                 </h5>
 
@@ -248,11 +249,11 @@ export default function App() {
                   A Backend less Men's shopping site. State management handled
                   using ContextAPI.
                 </p>
-                <div className="mt-[14%] flex justify-center hover:bg-cyan-500 rounded-md neon-cyan p-2 ">
+                <div className="md:mt-[40%] flex justify-center hover:bg-white rounded-md neon-gray p-2 ">
                   <a
                     target="_blank"
                     href="https://github.com/itss0urav/vogue-vault"
-                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-900 bg-clip-text text-transparent"
+                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-500 bg-clip-text text-transparent"
                   >
                     View Source
                   </a>
@@ -274,11 +275,39 @@ export default function App() {
                   TaskMate is a web application designed to help people manage
                   their tasks.
                 </p>
-                <div className="mt-[22%] flex justify-center hover:bg-green-500 rounded-md neon-cyan p-2 ">
+                <div className="md:mt-[50%] flex justify-center hover:bg-green-500 rounded-md neon-cyan p-2 ">
                   <a
                     target="_blank"
                     href="https://github.com/itss0urav/task-mates"
-                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-green-900 bg-clip-text text-transparent"
+                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-green-500 bg-clip-text text-transparent"
+                  >
+                    View Source
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* Note4You Project */}
+            <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105  max-w-sm backdrop-blur-xl neon-sky rounded-lg shadow p-5">
+              <img
+                className="rounded-t-lg"
+                src={Note4You}
+                alt="TaskMate Project"
+              />
+              <div className="p-4">
+                <h5 className="mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-sky-500 bg-clip-text text-transparent">
+                  Note4You
+                </h5>
+                <p className="mb-4 text text-lg font-bold bg-gradient-to-r from-fuchsia-200 to-sky-500 bg-clip-text text-transparent">
+                  Note4You is your new digital companion designed to make
+                  note-taking easy, efficient, and enjoyable. Our platform
+                  offers a seamless experience for creating, managing, and
+                  accessing your notes from anywhere, anytime.
+                </p>
+                <div className=" flex justify-center hover:bg-sky-500 rounded-md neon-sky p-2 ">
+                  <a
+                    target="_blank"
+                    href="https://github.com/itss0urav/Note4You"
+                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-500 bg-clip-text text-transparent"
                   >
                     View Source
                   </a>
@@ -292,7 +321,7 @@ export default function App() {
               <div className="text-center mt-2">
                 <a
                   href="mailto:sourav2021official@gmail.com"
-                  className="bg-black bg-opacity-50 hover:bg-cyan-300 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
+                  className="bg-black bg-opacity-50 hover:bg-cyan-500 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
                 >
                   Mail Me
                 </a>
@@ -300,7 +329,7 @@ export default function App() {
               <div className="text-center ">
                 <button
                   onClick={downloadResume}
-                  className="bg-black bg-opacity-50 hover:bg-cyan-300 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
+                  className="bg-black bg-opacity-50 hover:bg-cyan-500 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
                 >
                   Download Resume
                 </button>
