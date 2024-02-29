@@ -11,7 +11,14 @@ import { datas, projects, personalData, socials } from "./datas.js";
 import top from "./assets/imgs/top.png";
 
 export default function App() {
-  console.log(datas);
+  setTimeout(() => {
+    console.log(
+      " Hi there :) I Made my portfolio using React and Tailwind CSS .Find me Here \n GitHub: 👉https://github.com/itss0urav",
+      " \n LinkedIn: 👉https://www.linkedin.com/in/itssourav/",
+      " \n Instagram: 👉https://www.instagram.com/itssourav.dev/",
+      " \n Medium: 👉https://itss0urav.medium.com/"
+    );
+  }, 3000);
   const downloadResume = () => {
     const url = resume;
     const link = document.createElement("a");
@@ -78,6 +85,7 @@ export default function App() {
                 <div className="flex flex-wrap gap-4 md:gap-8">
                   {datas.map((data, index) => (
                     <img
+                      key={index}
                       src={data.src}
                       alt={data.alt}
                       className="rounded-md transition-transform duration-500 hover:scale-125  hover:neon-cyan hover:bg-cyan-500 w-10 lg:w-16"
@@ -96,7 +104,7 @@ export default function App() {
                 <img
                   src={socials[0].src}
                   alt={socials[0].alt}
-                  className="transition-transform duration-500 hover:scale-105  hover:neon-cyan rounded-md w-24 md:w-40"
+                  className="transition-transform duration-500 hover:scale-105 hover:neon-sky rounded-md w-24 md:w-40"
                 />
               </a>
               <a href={socials[1].href} target="_blank">
