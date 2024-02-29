@@ -317,11 +317,11 @@ export default function App() {
           </div>
 
           <div className="mt-8">
-            <div className="flex gap-8 justify-center">
+            <div className="flex flex-wrap gap-8 justify-center">
               <div className="text-center mt-2">
                 <a
                   href="mailto:sourav2021official@gmail.com"
-                  className="bg-black bg-opacity-50 hover:bg-cyan-500 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
+                  className="bg-black bg-opacity-50 hover:bg-cyan-500 text-white text-lg md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
                 >
                   Mail Me
                 </a>
@@ -329,7 +329,7 @@ export default function App() {
               <div className="text-center ">
                 <button
                   onClick={downloadResume}
-                  className="bg-black bg-opacity-50 hover:bg-cyan-500 text-white text-2xl md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
+                  className="bg-black bg-opacity-50 hover:bg-cyan-500 text-white text-lg md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
                 >
                   Download Resume
                 </button>
