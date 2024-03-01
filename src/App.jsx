@@ -99,7 +99,7 @@ export default function App() {
           autoPlay
           muted
           loop
-          className=" absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
+          className="blur-2xl scale-110 absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
         />
       ) : (
         <img
