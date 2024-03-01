@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Anywhere from "./assets/Anywhere.png";
 import VogueVault from "./assets/VogueVault.png";
 import TaskMate from "./assets/TaskMate.png";
 import Note4You from "./assets/Note4You.png";
 import resume from "/Sourav S  Resume.pdf";
 import bg from "./assets/bg.mp4";
+import bgImg from "./assets/deepspace.jpg";
 import { TypeAnimation } from "react-type-animation";
 import { datas, projects, personalData, socials } from "./datas.js";
 
 import top from "./assets/imgs/top.png";
 
 export default function App() {
+  const [hasGoodDevice, setHasGoodDevice] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  useEffect(() => {}, []);
+
   setTimeout(() => {
     console.log(
       " Hi there :) I Made my portfolio using React and Tailwind CSS .Find me Here \n GitHub: 👉https://github.com/itss0urav",
@@ -28,13 +38,76 @@ export default function App() {
   };
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center  animate-fade-in-down">
-      <video
-        src={bg}
-        autoPlay
-        muted
-        loop
-        className=" absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
-      />
+      {isModalOpen && (
+        <div className="fixed z-20 inset-0 overflow-y-auto">
+          <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div
+              className="fixed inset-0 transition-opacity"
+              aria-hidden="true"
+            >
+              <div className="absolute inset-0 bg-black opacity-75"></div>
+            </div>
+            <span
+              className="hidden sm:inline-block sm:align-middle sm:h-screen"
+              aria-hidden="true"
+            >
+              ​
+            </span>
+            <div className="inline-block align-bottom   rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+              <div className="bg-white backdrop-blur-md  bg-opacity-20 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div className="sm:flex sm:items-start">
+                  <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <h3
+                      className="text-lg leading-6 font-medium text-white"
+                      id="modal-title"
+                    >
+                      Does this device have strong internet connection?
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white backdrop-blur-md  bg-opacity-20 px-4 py-3 gap-2 lg:gap-4 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button
+                  type="button"
+                  className=" neon-green mt-3 w-full inline-flex justify-center items-center rounded-md border border-gray-300 shadow-sm px-4 py-1 bg-white text-base font-medium bg-gradient-to-r from-green-500 to-sky-100 bg-clip-text text-transparent hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm"
+                  onClick={() => {
+                    setHasGoodDevice(true);
+                    toggleModal();
+                  }}
+                >
+                  Yes
+                </button>
+                <button
+                  type="button"
+                  className=" neon-red mt-3 w-full inline-flex justify-center items-center rounded-md border border-gray-300 shadow-sm px-4 py-1 bg-white text-base font-medium bg-gradient-to-r from-red-500 to-sky-100 bg-clip-text text-transparent hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm"
+                  onClick={() => {
+                    setHasGoodDevice(false);
+                    toggleModal();
+                  }}
+                >
+                  No
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {hasGoodDevice === true ? (
+        <video
+          src={bg}
+          autoPlay
+          muted
+          loop
+          className=" absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
+        />
+      ) : (
+        <img
+          src={bgImg}
+          className="blur-sm scale-105 absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
+        />
+      )}
+
       <div className=" min-h-screen py-6 flex flex-col justify-center sm:py-12 z-10">
         <div className="mx-auto max-w-[80%]">
           {/* test */}
@@ -42,7 +115,7 @@ export default function App() {
             <img
               src={top}
               alt=""
-              className="absolute z-[-1]  w-2/4 md:w-[50rem] object-cover transform-gpu  "
+              className=" absolute z-[-1]  w-2/4 md:w-[50rem] object-cover transform-gpu  "
             />
           </div>
 
@@ -82,7 +155,7 @@ export default function App() {
                 Languages and Tools
               </h3>
               <div className="flex justify-center">
-                <div className="flex flex-wrap gap-4 md:gap-8">
+                <div className="flex ml-5 md:ml-0 flex-wrap gap-4 md:gap-8">
                   {datas.map((data, index) => (
                     <img
                       key={index}
@@ -254,7 +327,7 @@ export default function App() {
               <div className="text-center ">
                 <button
                   onClick={downloadResume}
-                  className="font-bold  bg-opacity-50 hover:bg-cyan-500 text-white hover:text-black text-lg md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
+                  className=" font-bold  bg-opacity-50 hover:bg-cyan-500 text-white hover:text-black text-lg md:text-3xl neon-sky py-2 px-3 text-center rounded-md text-opacity-100"
                 >
                   Download Resume
                 </button>
