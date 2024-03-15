@@ -153,7 +153,7 @@ export default function App() {
                 Languages and Tools
               </h3>
               <div className="flex justify-center">
-                <div className=" flex ml-5 md:ml-0 flex-wrap gap-4 md:gap-8">
+                <div className=" flex ml-5 md:ml-0 flex-wrap gap-2 md:gap-8">
                   {datas.map((data, index) => (
                     <img
                       key={index}
