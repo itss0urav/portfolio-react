@@ -54,6 +54,12 @@ export const datas = [
     src: "https://yt3.googleusercontent.com/X-rhKMndFm9hT9wIaJns1StBfGbFdLTkAROwm4UZ3n9ucrBky5CFIeeZhSszFXBgQjItzCD0SA=s900-c-k-c0x00ffffff-no-rj",
     alt: "Postman API",
   },
+
+  {
+    href: "https://jwt.io/",
+    src: "https://seeklogo.com/images/J/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com.png",
+    alt: "Jwt",
+  },
 ];
 
 export const projects = [

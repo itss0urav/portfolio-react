@@ -50,9 +50,7 @@ export default function App() {
             <span
               className="hidden sm:inline-block sm:align-middle sm:h-screen"
               aria-hidden="true"
-            >
-              ​
-            </span>
+            ></span>
             <div className="inline-block align-bottom   rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
               <div className="bg-white backdrop-blur-md  bg-opacity-20 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
@@ -155,13 +153,13 @@ export default function App() {
                 Languages and Tools
               </h3>
               <div className="flex justify-center">
-                <div className="flex ml-5 md:ml-0 flex-wrap gap-4 md:gap-8">
+                <div className=" flex ml-5 md:ml-0 flex-wrap gap-4 md:gap-8">
                   {datas.map((data, index) => (
                     <img
                       key={index}
                       src={data.src}
                       alt={data.alt}
-                      className="rounded-md transition-transform duration-500 hover:scale-125  hover:neon-cyan hover:bg-cyan-500 w-10 lg:w-16"
+                      className=" cursor-pointer p-1 bg-cyan-100 bg-opacity-20 border border-cyan-200 rounded-md transition-transform duration-500 hover:scale-125  hover:neon-cyan hover:bg-cyan-500 w-12 lg:w-16"
                     />
                   ))}
                 </div>
@@ -228,7 +226,7 @@ export default function App() {
                   <a
                     target="_blank"
                     href={projects[0].repoUrl}
-                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-300 bg-clip-text text-transparent"
+                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-300 to-sky-300 bg-clip-text text-transparent"
                   >
                     View Source
                   </a>
@@ -280,7 +278,7 @@ export default function App() {
                   <a
                     target="_blank"
                     href={projects[2].repoUrl}
-                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-green-500 bg-clip-text text-transparent"
+                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-green-700 bg-clip-text text-transparent"
                   >
                     View Source
                   </a>
@@ -305,7 +303,7 @@ export default function App() {
                   <a
                     target="_blank"
                     href={projects[3].repoUrl}
-                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-500 bg-clip-text text-transparent"
+                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-700 bg-clip-text text-transparent"
                   >
                     View Source
                   </a>
