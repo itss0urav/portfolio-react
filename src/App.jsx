@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Anywhere from "./assets/Anywhere.png";
 import VogueVault from "./assets/VogueVault.png";
 import TaskMate from "./assets/TaskMate.png";
@@ -120,7 +120,7 @@ export default function App() {
           {/* test */}
           <div className="bg-black bg-opacity-50 mt-[50%] md:mt-[40%] neon-fuchsia backdrop-blur-xl   rounded-lg shadow-md p-8 mb-8">
             <h1 className="  text-center font-bold text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
-              Hi, I'm Sourav
+              Hi, I&apos;m Sourav
             </h1>
             <h1 className=" text-xl md:text-4xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-4">
               <TypeAnimation
@@ -171,28 +171,28 @@ export default function App() {
               Socials
             </div>
             <div className=" m-4 flex flex-wrap justify-center gap-4 md:gap-24">
-              <a href={socials[0].href} target="_blank">
+              <a href={socials[0].href} target="blank">
                 <img
                   src={socials[0].src}
                   alt={socials[0].alt}
                   className="transition-transform duration-500 hover:scale-105 hover:neon-sky rounded-md w-24 md:w-40"
                 />
               </a>
-              <a href={socials[1].href} target="_blank">
+              <a href={socials[1].href} target="blank">
                 <img
                   src={socials[1].src}
                   alt={socials[1].alt}
                   className="transition-transform duration-500 hover:scale-105  hover:neon-gray rounded-md w-24 md:w-40"
                 />
               </a>
-              <a target="_blank" href={socials[2].href}>
+              <a target="blank" href={socials[2].href}>
                 <img
                   src={socials[2].src}
                   alt={socials[2].alt}
                   className="bg-red-500 py-1 transition-transform duration-500 hover:scale-105  hover:neon-red rounded-md w-24 md:w-40"
                 />
               </a>
-              <a target="_blank" href={socials[3].href}>
+              <a target="blank" href={socials[3].href}>
                 <img
                   src={socials[3].src}
                   alt={socials[3].alt}
@@ -224,7 +224,7 @@ export default function App() {
 
                 <div className="md:mt-[30%] flex justify-center hover:bg-fuchsia-500 rounded-md neon-fuchsia p-2 ">
                   <a
-                    target="_blank"
+                    target="blank"
                     href={projects[0].repoUrl}
                     className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-300 to-sky-300 bg-clip-text text-transparent"
                   >
@@ -251,7 +251,7 @@ export default function App() {
                 </p>
                 <div className="md:mt-[40%] flex justify-center hover:bg-white rounded-md neon-gray p-2 ">
                   <a
-                    target="_blank"
+                    target="blank"
                     href={projects[1].repoUrl}
                     className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-500 bg-clip-text text-transparent"
                   >
@@ -276,7 +276,7 @@ export default function App() {
                 </p>
                 <div className="md:mt-[50%] flex justify-center hover:bg-green-500 rounded-md neon-cyan p-2 ">
                   <a
-                    target="_blank"
+                    target="blank"
                     href={projects[2].repoUrl}
                     className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-green-700 bg-clip-text text-transparent"
                   >
@@ -301,7 +301,7 @@ export default function App() {
                 </p>
                 <div className=" flex justify-center hover:bg-sky-500 rounded-md neon-sky p-2 ">
                   <a
-                    target="_blank"
+                    target="blank"
                     href={projects[3].repoUrl}
                     className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-700 bg-clip-text text-transparent"
                   >

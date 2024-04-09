@@ -25,6 +25,11 @@ export const datas = [
     alt: "JavaScript",
   },
   {
+    href: "https://www.typescriptlang.org/branding/",
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+    alt: "typescript",
+  },
+  {
     href: "https://www.mongodb.com/",
     src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
     alt: "MongoDB",
