@@ -6,14 +6,14 @@ const Card = ({
   duration = "Duration",
   imageUrl = "",
 }) => (
-  <div className=" flex justify-between p-4 rounded-xl border border-gray-200 shadow-lg min-w-[20rem] w-fit h-fit min-h-[10rem] bg-gradient-to-r from-slate-900 to-slate-800">
+  <div className=" flex justify-between p-4 rounded-xl border border-gray-200 shadow-lg min-w-[20rem] w-fit h-fit min-h-[10rem] bg-black hover:bg-slate-950 bg-opacity-55 hover:scale-105 transform transition-all  backdrop-blur-md">
     <div className="w-2/3">
       <p className="text-gray-200 text-xl font-semibold mb-2">{company}</p>
       <p className="text-gray-300 text-lg">{role}</p>
       <p className="text-gray-500">{duration}</p>
     </div>
     <div className="">
-      <img src={imageUrl} alt={imageUrl} className=" rounded-full w-10 h-10" />
+      <img src={imageUrl} alt={imageUrl} className=" rounded-md w-10 h-10" />
     </div>
   </div>
 );
