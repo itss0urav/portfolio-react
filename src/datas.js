@@ -122,3 +122,20 @@ export const socials = [
     alt: "Medium",
   },
 ];
+
+export const experience = [
+  {
+    imageUrl:
+      "https://media.licdn.com/dms/image/D4D0BAQFv5DkOwXwXTA/company-logo_200_200/0/1696922059797?e=1720656000&v=beta&t=Ionx_gDSuM_YAfzJKoSLkNBC4PKFFMHu1Y77phh1EVA",
+    company: "N-OMS",
+    role: "Full Stack Developer",
+    duration: "Current - 02/2024",
+  },
+  {
+    imageUrl:
+      "https://media.licdn.com/dms/image/C560BAQHkucN_UrJX3w/company-logo_200_200/0/1663299299802/softentec_logo?e=1720656000&v=beta&t=vcr38kRGjSYJQbzmOO84BCkPLTlavTm2YSYiv-CxlFc",
+    company: "Soften Technologies",
+    role: "MERN Stack Developer (Intern)",
+    duration: "09/2023 - 02/2024",
+  },
+];

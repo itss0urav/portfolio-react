@@ -7,9 +7,10 @@ import resume from "/Sourav S  Resume.pdf";
 import bg from "./assets/bg.mp4";
 import bgImg from "./assets/deepspace.jpg";
 import { TypeAnimation } from "react-type-animation";
-import { datas, projects, personalData, socials } from "./datas.js";
+import { datas, projects, personalData, socials, experience } from "./datas.js";
 
 import top from "./assets/imgs/top.png";
+import Card from "./ui/card.jsx";
 
 export default function App() {
   const [hasGoodDevice, setHasGoodDevice] = useState(null);
@@ -118,7 +119,7 @@ export default function App() {
           </div>
 
           {/* test */}
-          <div className="bg-black bg-opacity-50 mt-[50%] md:mt-[40%] neon-fuchsia backdrop-blur-xl   rounded-lg shadow-md p-8 mb-8">
+          <section className="bg-black bg-opacity-50 mt-[50%] md:mt-[40%] neon-fuchsia backdrop-blur-xl   rounded-lg shadow-md p-8 mb-8">
             <h1 className="  text-center font-bold text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
               Hi, I&apos;m Sourav
             </h1>
@@ -165,8 +166,8 @@ export default function App() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="py-10 my-20 backdrop-blur-md neon-fuchsia rounded-md">
+          </section>
+          <section className="py-10 my-20 backdrop-blur-md neon-fuchsia rounded-md">
             <div className="text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-6">
               Socials
             </div>
@@ -200,117 +201,136 @@ export default function App() {
                 />
               </a>
             </div>
-          </div>
-          <div className=" text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-6">
-            Projects
-          </div>
-          {/* Projects Section */}
-          <div className="flex flex-wrap justify-center gap-8">
-            {/* Anywhere Project */}
-            <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105 max-w-sm backdrop-blur-xl neon-fuchsia rounded-lg shadow p-5">
-              <img
-                className="rounded-t-lg"
-                src={Anywhere}
-                alt="Anywhere Project"
-              />
-              <div className="p-4">
-                <h5 className="mb-2 text-2xl font-bold bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
-                  {projects[0].name}
-                </h5>
+          </section>
 
-                <p className="mb-4 text-lg font-bold bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
-                  {projects[0].description}
-                </p>
+          <section>
+            <div className=" text-2xl md:text-5xl bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent font-bold text-center mb-6">
+              Projects
+            </div>
+            {/* Projects Section */}
+            <div className="flex flex-wrap justify-center gap-8">
+              {/* Anywhere Project */}
+              <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105 max-w-sm backdrop-blur-xl neon-fuchsia rounded-lg shadow p-5">
+                <img
+                  className="rounded-t-lg"
+                  src={Anywhere}
+                  alt="Anywhere Project"
+                />
+                <div className="p-4">
+                  <h5 className="mb-2 text-2xl font-bold bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
+                    {projects[0].name}
+                  </h5>
 
-                <div className="md:mt-[30%] flex justify-center hover:bg-fuchsia-500 rounded-md neon-fuchsia p-2 ">
-                  <a
-                    target="blank"
-                    href={projects[0].repoUrl}
-                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-300 to-sky-300 bg-clip-text text-transparent"
-                  >
-                    View Source
-                  </a>
+                  <p className="mb-4 text-lg font-bold bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
+                    {projects[0].description}
+                  </p>
+
+                  <div className="md:mt-[30%] flex justify-center hover:bg-fuchsia-500 rounded-md neon-fuchsia p-2 ">
+                    <a
+                      target="blank"
+                      href={projects[0].repoUrl}
+                      className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-300 to-sky-300 bg-clip-text text-transparent"
+                    >
+                      View Source
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Vogue Vault Project */}
+              <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105 max-w-sm backdrop-blur-xl neon-gray rounded-lg shadow p-5">
+                <img
+                  className="rounded-t-lg"
+                  src={VogueVault}
+                  alt="Vogue Vault Project"
+                />
+                <div className="p-4">
+                  <h5 className=" w-30 mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-gray-500 bg-clip-text text-transparent">
+                    {projects[1].name}
+                  </h5>
+
+                  <p className="mb-4 text-lg font-bold bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
+                    {projects[1].description}
+                  </p>
+                  <div className="md:mt-[40%] flex justify-center hover:bg-white rounded-md neon-gray p-2 ">
+                    <a
+                      target="blank"
+                      href={projects[1].repoUrl}
+                      className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-500 bg-clip-text text-transparent"
+                    >
+                      View Source
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* TaskMate Project */}
+              <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105  max-w-sm backdrop-blur-xl neon-green rounded-lg shadow p-5">
+                <img
+                  className="rounded-t-lg"
+                  src={TaskMate}
+                  alt="TaskMate Project"
+                />
+                <div className="p-4">
+                  <h5 className="mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-green-500 bg-clip-text text-transparent">
+                    {projects[2].name}
+                  </h5>
+                  <p className="mb-4 text text-lg font-bold bg-gradient-to-r from-fuchsia-200 to-green-500 bg-clip-text text-transparent">
+                    {projects[2].description}
+                  </p>
+                  <div className="md:mt-[50%] flex justify-center hover:bg-green-500 rounded-md neon-cyan p-2 ">
+                    <a
+                      target="blank"
+                      href={projects[2].repoUrl}
+                      className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-green-700 bg-clip-text text-transparent"
+                    >
+                      View Source
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* Note4You Project */}
+              <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105  max-w-sm backdrop-blur-xl neon-sky rounded-lg shadow p-5">
+                <img
+                  className="rounded-t-lg"
+                  src={Note4You}
+                  alt="TaskMate Project"
+                />
+                <div className="p-4">
+                  <h5 className="mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-sky-500 bg-clip-text text-transparent">
+                    {projects[3].name}
+                  </h5>
+                  <p className="mb-4 text text-lg font-bold bg-gradient-to-r from-fuchsia-200 to-sky-500 bg-clip-text text-transparent">
+                    {projects[3].description}
+                  </p>
+                  <div className=" flex justify-center hover:bg-sky-500 rounded-md neon-sky p-2 ">
+                    <a
+                      target="blank"
+                      href={projects[3].repoUrl}
+                      className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-700 bg-clip-text text-transparent"
+                    >
+                      View Source
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Vogue Vault Project */}
-            <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105 max-w-sm backdrop-blur-xl neon-gray rounded-lg shadow p-5">
-              <img
-                className="rounded-t-lg"
-                src={VogueVault}
-                alt="Vogue Vault Project"
-              />
-              <div className="p-4">
-                <h5 className=" w-30 mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-gray-500 bg-clip-text text-transparent">
-                  {projects[1].name}
-                </h5>
-
-                <p className="mb-4 text-lg font-bold bg-gradient-to-r from-neutral-50 to-fuchsia-600 bg-clip-text text-transparent">
-                  {projects[1].description}
-                </p>
-                <div className="md:mt-[40%] flex justify-center hover:bg-white rounded-md neon-gray p-2 ">
-                  <a
-                    target="blank"
-                    href={projects[1].repoUrl}
-                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-500 bg-clip-text text-transparent"
-                  >
-                    View Source
-                  </a>
-                </div>
-              </div>
+          </section>
+          <section className="neon-cyan my-8 p-6 rounded-md">
+            <h4 className="font-bold bg-gradient-to-r from-white to-neutral-200 bg-clip-text text-transparent text-lg md:text-3xl py-2 px-3 text-center rounded-md text-opacity-100">
+              Experience
+            </h4>
+            <div className="flex flex-wrap gap-4 place-content-center">
+              {experience?.map((data, index) => (
+                <Card
+                  imageUrl={data.imageUrl}
+                  key={index}
+                  company={data.company}
+                  role={data.role}
+                  duration={data.duration}
+                />
+              ))}
             </div>
-            {/* TaskMate Project */}
-            <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105  max-w-sm backdrop-blur-xl neon-green rounded-lg shadow p-5">
-              <img
-                className="rounded-t-lg"
-                src={TaskMate}
-                alt="TaskMate Project"
-              />
-              <div className="p-4">
-                <h5 className="mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-green-500 bg-clip-text text-transparent">
-                  {projects[2].name}
-                </h5>
-                <p className="mb-4 text text-lg font-bold bg-gradient-to-r from-fuchsia-200 to-green-500 bg-clip-text text-transparent">
-                  {projects[2].description}
-                </p>
-                <div className="md:mt-[50%] flex justify-center hover:bg-green-500 rounded-md neon-cyan p-2 ">
-                  <a
-                    target="blank"
-                    href={projects[2].repoUrl}
-                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-green-700 bg-clip-text text-transparent"
-                  >
-                    View Source
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Note4You Project */}
-            <div className="bg-black bg-opacity-50 transition-transform duration-500 hover:scale-105  max-w-sm backdrop-blur-xl neon-sky rounded-lg shadow p-5">
-              <img
-                className="rounded-t-lg"
-                src={Note4You}
-                alt="TaskMate Project"
-              />
-              <div className="p-4">
-                <h5 className="mb-2 text-2xl font-bold bg-gradient-to-r from-fuchsia-100 to-sky-500 bg-clip-text text-transparent">
-                  {projects[3].name}
-                </h5>
-                <p className="mb-4 text text-lg font-bold bg-gradient-to-r from-fuchsia-200 to-sky-500 bg-clip-text text-transparent">
-                  {projects[3].description}
-                </p>
-                <div className=" flex justify-center hover:bg-sky-500 rounded-md neon-sky p-2 ">
-                  <a
-                    target="blank"
-                    href={projects[3].repoUrl}
-                    className="font-bold text-xl D rounded-md p-1 bg-gradient-to-r from-fuchsia-500 to-sky-700 bg-clip-text text-transparent"
-                  >
-                    View Source
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          </section>
 
           <div className="mt-8">
             <div className="flex flex-wrap gap-8 justify-center">
