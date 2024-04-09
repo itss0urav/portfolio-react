@@ -315,7 +315,7 @@ export default function App() {
               </div>
             </div>
           </section>
-          <section className="neon-cyan my-8 p-6 rounded-md">
+          <section className="neon-fuchsia my-8 p-6 rounded-md">
             <h4 className="font-bold bg-gradient-to-r from-white to-neutral-200 bg-clip-text text-transparent text-lg md:text-3xl py-2 px-3 text-center rounded-md text-opacity-100">
               Experience
             </h4>
